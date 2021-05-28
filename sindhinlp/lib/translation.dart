@@ -1,13 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:translator/translator.dart';
 
 class TranslationPage extends StatefulWidget {
-  TranslationPage({Key key, this.title}) : super(key: key);
   final String title;
+  final String from;
+  final String to;
+
+  TranslationPage({Key key, this.title, this.from, this.to}) : super(key: key);
+
   @override
   _TranslationPageState createState() => _TranslationPageState();
 }
 
 class _TranslationPageState extends State<TranslationPage> {
+
+  final translator = GoogleTranslator();
+
+  var _output = "";
+
+  void _translate(String input) async{
+    var translation = translator.translate(input, from: widget.from, to: widget.to);
+    translation.then((value){
+      setState(() {
+        // value = value.replaceAll("bad-word", "good-word");
+        if(value != null){
+          _output = value;
+        }else{
+          _output =  "Translation will appear here";
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +45,9 @@ class _TranslationPageState extends State<TranslationPage> {
           children: <Widget>[
             TextField(
               autofocus: true,
+              onChanged: (String text){
+                _translate(text);
+              },
               decoration: InputDecoration(
                 hintText: "Type here .."
               ),
@@ -28,16 +55,16 @@ class _TranslationPageState extends State<TranslationPage> {
             SizedBox(height: 10,),
             Divider(),
             SizedBox(height: 10,),
+            Text("Translation:",style: TextStyle(fontSize: 18),),
             Container(
+              padding: EdgeInsets.fromLTRB(5,10,5,10),
               color: Colors.blue,
               child: Center(
-                child: Text("Translation will appear here", style: TextStyle(color: Colors.white),),
+                child: Text(_output, style: TextStyle(color: Colors.white, fontSize: 18),textAlign: TextAlign.center,),
               ),
-              height: 150,
+              // height: 150,
               width: MediaQuery.of(context).size.width,
             ),
-
-
           ],
         ),
       ),
