@@ -43,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Eng vs Sindhi (NLP)", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Eng vs Sindhi", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng vs Sindhi (NLP)", from: 'en',to: 'sd',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng vs Sindhi", from: 'en',to: 'sd',)),
                   );
 
                 },
