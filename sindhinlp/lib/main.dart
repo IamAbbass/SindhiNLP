@@ -43,11 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Eng vs Sindhi", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Eng to Sindhi", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng vs Sindhi", from: 'en',to: 'sd',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng to Sindhi", from: 'en',to: 'sd',)),
                   );
 
                 },
@@ -58,11 +58,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Sindhi vs Eng", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Sindhi to Eng", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Sindhi vs Eng", from: 'sd',to: 'en',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Sindhi to Eng", from: 'sd',to: 'en',)),
                   );
                 },
               ),
@@ -72,11 +72,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Urdu vs Sindhi", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Urdu to Sindhi", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Urdu vs Sindhi", from: 'ur',to: 'sd',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Urdu to Sindhi", from: 'ur',to: 'sd',)),
                   );
                 },
               ),
@@ -86,11 +86,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Sindhi vs Urdu", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Sindhi to Urdu", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Sindhi vs Urdu", from: 'sd',to: 'ur',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Sindhi to Urdu", from: 'sd',to: 'ur',)),
                   );
                 },
               ),
@@ -100,11 +100,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Eng vs Urdu", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Eng to Urdu", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng vs Urdu", from: 'en',to: 'ur',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Eng to Urdu", from: 'en',to: 'ur',)),
                   );
                 },
               ),
@@ -114,11 +114,11 @@ class _MyHomePageState extends State<MyHomePage> {
               minWidth: MediaQuery.of(context).size.width-20,
               height: 50,
               child: RaisedButton(
-                child: Text("Urdu vs Eng", style: TextStyle(color: Colors.white, fontSize: 18),),
+                child: Text("Urdu to Eng", style: TextStyle(color: Colors.white, fontSize: 18),),
                 onPressed: (){
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Urdu vs Eng", from: 'ur', to: 'en',)),
+                    MaterialPageRoute(builder: (context) => TranslationPage(title: "Urdu to Eng", from: 'ur', to: 'en',)),
                   );
                 },
               ),
