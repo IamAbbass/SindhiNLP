@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:translator/translator.dart';
+import 'package:http/http.dart' as http;
 
 class TranslationPage extends StatefulWidget {
   final String title;
@@ -18,6 +19,14 @@ class _TranslationPageState extends State<TranslationPage> {
 
   var _output = "";
 
+  Future _httpGetAPI(String url){
+     return http.get(Uri.parse('https://phplaravel-552536-1954171.cloudwaysapps.com/api/'));
+  }
+
+  String httpGetAPI(String url){
+     return 'https://phplaravel-552536-1954171.cloudwaysapps.com/api/';
+  }
+
   void _translate(String input) async{
     var translation = translator.translate(input, from: widget.from, to: widget.to);
     translation.then((value){
@@ -30,6 +39,11 @@ class _TranslationPageState extends State<TranslationPage> {
         }
       });
     });
+
+    //API for en to sd
+    if(widget.from == 'en' && widget.to == 'sd'){
+      var output_api = httpGetAPI("https://phplaravel-552536-1954171.cloudwaysapps.com/api/$input");
+    }
   }
 
   @override
@@ -69,5 +83,5 @@ class _TranslationPageState extends State<TranslationPage> {
         ),
       ),
     );
-  }
+  }  
 }
